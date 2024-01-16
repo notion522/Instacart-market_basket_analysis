@@ -5,11 +5,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # # Load your data
-data_aisles = pd.read_csv("D:/project-internship/aisles.csv/aisles.csv")
-data_departments = pd.read_csv("D:/project-internship/departments.csv/departments.csv")
-data_order_products = pd.read_csv("D:/project-internship/order_products__prior.csv/order_products__prior.csv")
-data_orders = pd.read_csv("D:/project-internship/orders.csv/orders.csv")
-data_products = pd.read_csv("D:/project-internship/products.csv/products.csv")
+data_aisles = pd.read_csv("aisles.csv")
+data_departments = pd.read_csv("departments.csv")
+data_order_products = pd.read_csv("order_products__prior.csv")
+data_orders = pd.read_csv("orders.csv")
+data_products = pd.read_csv("products.csv")
 
 df_order_products = pd.merge(data_order_products.sample(frac=0.1), data_products, on='product_id', how='left')
 df_order_products = pd.merge(df_order_products, data_aisles, on='aisle_id', how='left')
